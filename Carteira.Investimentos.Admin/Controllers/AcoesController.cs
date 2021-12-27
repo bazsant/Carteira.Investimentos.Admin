@@ -58,7 +58,6 @@ namespace Carteira.Investimentos.Admin.Controllers
         /// <response code="500">Erro não esperado</response>
         [HttpGet("{codigoAcao}/cotacao")]
         [ProducesResponseType(typeof(BaseResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BaseResult), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(BaseResult), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(BaseResult), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCotacao([FromRoute] string codigoAcao)
